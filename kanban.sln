@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "kanban-webapp", "kanban-webapp\kanban-webapp.csproj", "{C2501FB6-1C39-4E5B-84EE-C0D2B749138F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2501FB6-1C39-4E5B-84EE-C0D2B749138F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2501FB6-1C39-4E5B-84EE-C0D2B749138F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2501FB6-1C39-4E5B-84EE-C0D2B749138F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2501FB6-1C39-4E5B-84EE-C0D2B749138F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4746E86-5DA3-40B9-B7FF-BE71BC93247F}
+	EndGlobalSection
+EndGlobal
