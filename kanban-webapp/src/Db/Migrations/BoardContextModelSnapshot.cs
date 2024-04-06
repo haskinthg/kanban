@@ -25,7 +25,10 @@ namespace kanban_webapp.Migrations
             modelBuilder.Entity("Kanban.Model.Entity.BoardEntity", b =>
                 {
                     b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
                     b.Property<string>("Description")
                         .HasColumnType("text");
@@ -78,27 +81,6 @@ namespace kanban_webapp.Migrations
                     b.ToTable("Columns");
                 });
 
-            modelBuilder.Entity("Kanban.Model.Entity.UserEntity", b =>
-                {
-                    b.Property<string>("UserName")
-                        .HasColumnType("text");
-
-                    b.Property<long?>("BoardEntityId")
-                        .HasColumnType("bigint");
-
-                    b.Property<string>("FirstName")
-                        .HasColumnType("text");
-
-                    b.Property<string>("LastName")
-                        .HasColumnType("text");
-
-                    b.HasKey("UserName");
-
-                    b.HasIndex("BoardEntityId");
-
-                    b.ToTable("UserEntity");
-                });
-
             modelBuilder.Entity("Kanban.Model.Entity.CardEntity", b =>
                 {
                     b.HasOne("Kanban.Model.Entity.ColumnEntity", null)
@@ -113,18 +95,9 @@ namespace kanban_webapp.Migrations
                         .HasForeignKey("BoardEntityId");
                 });
 
-            modelBuilder.Entity("Kanban.Model.Entity.UserEntity", b =>
-                {
-                    b.HasOne("Kanban.Model.Entity.BoardEntity", null)
-                        .WithMany("Users")
-                        .HasForeignKey("BoardEntityId");
-                });
-
             modelBuilder.Entity("Kanban.Model.Entity.BoardEntity", b =>
                 {
                     b.Navigation("Columns");
-
-                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("Kanban.Model.Entity.ColumnEntity", b =>

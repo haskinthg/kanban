@@ -6,7 +6,7 @@ namespace Kanban.Model.Entity;
 public class BoardEntity : IBaseEntity
 {
     [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.None)]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public required long Id { get; set; }
     public required String Name { get; set; }
     public String? Description { get; set; }
